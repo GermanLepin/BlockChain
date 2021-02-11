@@ -1,0 +1,5 @@
+*.py[co]
+__pycache__
+django.db.backends.postgresql_psycopg2
+.*
+!.gitignore
