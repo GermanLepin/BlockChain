@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    BCSchain
+{% endblock %}
+
+{% block content %}
+
+    <div class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto my-2 text-center">
+                    <h1 class="text-capitalize font-weight-bold">
+                        Blocks
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        {%  for i in new %}
+            <div class="alert alert-warning">
+                <a class="alert alert-warning" href="{% url 'block_height' i.block_id %}">Блок# {{ i.block_id}}</a>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

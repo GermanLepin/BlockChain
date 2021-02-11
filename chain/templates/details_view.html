@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+
+{% block title %}blocks#{% endblock %}
+
+{% block content %}
+    <div>
+        <h3 class="alert alert-warning">Высота блока : {{blocks.block_id}}</h3>
+        <p class="alert alert-warning">Хэш блока : {{ blocks.block_hash }}</p>
+        <p class="alert alert-warning">Время блока : {{ blocks.block_time }}</p>
+        <p class="alert alert-warning">Адрес майнера : {{ blocks.miner_address }}</p>
+        <p class="alert alert-warning">Количество транзакций в блоке : {{ blocks.num_trans_in_block }}</p>
+    </div>
+{% endblock %}
