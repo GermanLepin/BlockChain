@@ -12,12 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 import django_heroku
-from django.core.checks import database
 
-import dj-database-url
-
-db_from_env = dj-database-url.config()
-DATABASE['default'].update(db_from_env)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,7 +26,7 @@ SECRET_KEY = 'r$to!qd)gym-%%=u0)czi3ao7_ybay-($7du@ovr+%3okgpj6!'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.getenv("DEBUG", True))
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
