@@ -5,7 +5,7 @@ from django.views.generic import DetailView
 # Create your views here.
 
 def blocks(request):
-    new = Block.objects.order_by('block_time')
+    new = Block.objects.order_by('-block_time')
     return render(request, 'blocks.html', {'new': new})
 
 class BlockDetailViews(DetailView):
